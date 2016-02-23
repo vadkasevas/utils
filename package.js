@@ -13,7 +13,24 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
-  api.addFiles('utils.js');
+  api.use('jparker:crypto-core');
+  api.use('jparker:crypto-md5');
+  _.each(['dateUtils','meteorUtils','mongoUtils','numberUtils','objectUtils','stringUtils'],function(fileName){
+      api.addFiles('lib/'+fileName+'.js');
+  });
+
+  api.export(
+      [
+        'formatRuDateTime','inDateRange',
+        'throttle',
+        'cursorForEachChunked',
+        'rndInt',
+        'md5','isset','objectSize','randKey','randValue','eachObjectField','generateRandomHash',
+        'trim'
+      ]
+      , ['client', 'server']
+  );
+
 });
 
 Package.onTest(function(api) {
