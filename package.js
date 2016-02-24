@@ -1,6 +1,6 @@
 Package.describe({
   name: 'malibun23:utils',
-  version: '0.0.5',
+  version: '0.0.6',
   // Brief, one-line summary of the package.
   summary: '',
   // URL to the Git repository containing the source code for this package.
@@ -35,7 +35,7 @@ Package.onUse(function(api) {
       [
         'formatRuDateTime','inDateRange',
         'throttle',
-        'cursorForEachChunked',
+        'cursorForEachChunked','eachCursorChunk',
         'rndInt',
         'md5','isset','objectSize','randKey','randValue','eachObjectField','generateRandomHash',
         'trim'
