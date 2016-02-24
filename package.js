@@ -17,9 +17,13 @@ Package.onUse(function(api) {
 
   api.use('jparker:crypto-core');
   api.use('jparker:crypto-md5');
-  _.each(['dateUtils','meteorUtils','mongoUtils','numberUtils','objectUtils','stringUtils'],function(fileName){
-      api.addFiles('lib/'+fileName+'.js');
-  });
+
+  api.addFiles('lib/dateUtils.js');
+  api.addFiles('lib/meteorUtils.js');
+  api.addFiles('lib/mongoUtils.js');
+  api.addFiles('lib/numberUtils.js');
+  api.addFiles('lib/objectUtils.js');
+  api.addFiles('lib/stringUtils.js');
 
   api.export(
       [
