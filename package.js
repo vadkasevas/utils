@@ -1,6 +1,6 @@
 Package.describe({
   name: 'malibun23:utils',
-  version: '0.0.3',
+  version: '0.0.4',
   // Brief, one-line summary of the package.
   summary: '',
   // URL to the Git repository containing the source code for this package.
@@ -25,6 +25,7 @@ Package.onUse(function(api) {
   api.addFiles('lib/numberUtils.js');
   api.addFiles('lib/objectUtils.js');
   api.addFiles('lib/stringUtils.js');
+  api.addFiles('lib/fileUtils.js');
 
   api.export(
       [
@@ -36,6 +37,12 @@ Package.onUse(function(api) {
         'trim'
       ]
       , ['client', 'server']
+  );
+
+  api.export([
+      'fileExists','dirExists'
+    ],
+    ['server']
   );
 
 });
