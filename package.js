@@ -1,6 +1,6 @@
 Package.describe({
   name: 'malibun23:utils',
-  version: '0.0.9',
+  version: '0.0.10',
   // Brief, one-line summary of the package.
   summary: '',
   // URL to the Git repository containing the source code for this package.
@@ -25,9 +25,9 @@ Package.onUse(function(api) {
   api.use('jparker:crypto-md5');
 
 
-  api.addFiles('lib/dateUtils.js','lib/meteorUtils.js','lib/mongoUtils.js','lib/numberUtils.js','lib/objectUtils.js','lib/stringUtils.js'
+  api.addFiles(['lib/dateUtils.js','lib/meteorUtils.js','lib/mongoUtils.js','lib/numberUtils.js','lib/objectUtils.js','lib/stringUtils.js']
       ,['server','client']);
-  api.addFiles(['lib/fileUtils.js','server/meteorUtils.js'],['server']);
+  api.addFiles(['server/fileUtils.js','server/meteorUtils.js'],['server']);
 
 
   api.export(
