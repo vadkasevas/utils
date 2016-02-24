@@ -17,7 +17,7 @@ Package.onUse(function(api) {
 
   api.use('jparker:crypto-core');
   api.use('jparker:crypto-md5');
-    
+
 
   api.addFiles('lib/dateUtils.js');
   api.addFiles('lib/meteorUtils.js');
