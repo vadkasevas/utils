@@ -1,6 +1,6 @@
 Package.describe({
   name: 'malibun23:utils',
-  version: '0.0.7',
+  version: '0.0.8',
   // Brief, one-line summary of the package.
   summary: '',
   // URL to the Git repository containing the source code for this package.
@@ -18,18 +18,17 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
   api.use('underscore');
-
+  api.use('momentjs:moment');
+  api.use('mrt:moment-timezone');
+  api.use('rzymek:moment-locale-ru');
   api.use('jparker:crypto-core');
   api.use('jparker:crypto-md5');
 
 
-  api.addFiles('lib/dateUtils.js');
-  api.addFiles('lib/meteorUtils.js');
-  api.addFiles('lib/mongoUtils.js');
-  api.addFiles('lib/numberUtils.js');
-  api.addFiles('lib/objectUtils.js');
-  api.addFiles('lib/stringUtils.js');
-  api.addFiles('lib/fileUtils.js');
+  api.addFiles('lib/dateUtils.js','lib/meteorUtils.js','lib/mongoUtils.js','lib/numberUtils.js','lib/objectUtils.js','lib/stringUtils.js'
+      ,['server','client']);
+  api.addFiles(['lib/fileUtils.js','server/meteorUtils.js'],'server');
+
 
   api.export(
       [
