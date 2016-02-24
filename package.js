@@ -13,6 +13,8 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
+  api.use('underscore');
+
   api.use('jparker:crypto-core');
   api.use('jparker:crypto-md5');
   _.each(['dateUtils','meteorUtils','mongoUtils','numberUtils','objectUtils','stringUtils'],function(fileName){
